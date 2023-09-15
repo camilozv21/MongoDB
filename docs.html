@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="docs.css">
+    <title>Docs</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/jsFrontend/index.html">G<strong>API</strong>FS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/jsFrontend/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jsFrontend/docs.html">Docs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Links Oficiales
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://developers.giphy.com/docs/api"
+                                        target="_blank">GIPHY API</a>
+                                </li>
+                                <li><a class="dropdown-item" href="https://developers.giphy.com/dashboard/?create=true"
+                                        target="_blank">Crea Tu
+                                        Aplicacion</a></li>
+                                <li><a class="dropdown-item" href="https://giphy.com" target="_blank">Ver gifs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-docs">
+        <h2
+            style="padding-top: 5rem; padding-bottom: 0.1rem; padding-left: 2rem;font-weight: 700; text-transform: capitalize;">
+            API guia de inicio
+            rapido</h2>
+        <hr>
+        <div class="divdocs-img">
+            <img src="/jsFrontend/images/gifapi.gif" alt="gifid">
+        </div>
+        <section class="section-content">
+            <article class="article-content">
+                <p>Bienvenido a GAPIFS API, aqui puedes aprender a integrar esta aplicacion en tus proyectos, usando la
+                    libreria de GIFs y Stickers mas grande del mundo</p>
+            </article>
+            <article class="article-content">
+                <h2 style="font-weight: 700;">Inicio rapido</h2>
+                <p>La siguiente guía le guiará a través de la integración mínima viable API GIPHY para una experiencia
+                    GIPHY sin problemas en su aplicación. Si tiene alguna pregunta, envíenos un correo electrónico a
+                    developers@giphy.com.</p>
+            </article>
+            <article class="article-content">
+                <h2 style="font-weight: 500;">Aplicar por una API Key(s)</h2>
+                <ol>
+                    <li><strong>Crea una clave de API</strong> de GIPHY haciendo clic en <a
+                            href="https://developers.giphy.com/dashboard/?create=true">Crear una aplicación</a> en el
+                        panel de desarrolladores (primero tienes que crear una cuenta).
+                        Nota: Todas las claves API comienzan como claves beta, que tienen una tasa limitada (42 lecturas
+                        por hora y 1000 búsquedas/llamadas API por día).</li>
+                    <li><strong>Crea claves distintas para cada plataforma (iOS, Android, Web) y sección.</strong> Si
+                        utilizas una integración de GIPHY en diferentes secciones de tu aplicación, GIPHY requiere que
+                        cada uso de nuestro servicio esté delimitado por una clave diferente para cada sección por
+                        plataforma.</li>
+                </ol>
+            </article>
+            <article class="article-content">
+                <h2 style="font-weight: 700;">Implementa los Endpoints necesarios</h2>
+                <p>La experiencia GIPHY cobra vida con dos puntos finales esenciales: Tendencias y Búsqueda.
+                    <br>
+                    <br>
+                    El punto final Trending rellena automáticamente el contenido más relevante y atractivo cada día,
+                    mientras que el punto final Search permite a los usuarios buscar en nuestra biblioteca de millones
+                    de GIFs y Stickers introduciendo una palabra o frase.
+                </p>
+            </article>
+        </section>
+    </main>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i
+                                class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
