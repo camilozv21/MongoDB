@@ -1,6 +1,10 @@
 window.addEventListener('load', () => {
-    for (let i = 1; i <= 10; i++) {
-        const endpoint = `https://api.giphy.com/v1/gifs/random?api_key=fRosJIDpbrsMJEpcfjX9ckflY6Woj28R&tag=&rating=g`
+    let offset = 0;
+    const limit = 10; // Número de resultados por página
+
+    function loadResults() {
+        offset += limit;
+        const endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=fRosJIDpbrsMJEpcfjX9ckflY6Woj28R&tag=&rating=g&limit=${limit}&offset=${offset}`
 
         fetch(endpoint)
             .then(res => res.json())
@@ -8,16 +12,30 @@ window.addEventListener('load', () => {
 
                 const consulta = document.querySelector('.consulta');
 
-                const newConsult = document.createElement('article');
+                while (consulta.firstChild) {
+                    consulta.removeChild(consulta.firstChild);
+                }
 
-                newConsult.innerHTML += `<h3>${data.data.username ? data.data.username : 'Sin titulo :c'}</h3>`
-                newConsult.innerHTML += `<img src="${data.data.images.downsized.url}"></img>`
-                newConsult.innerHTML += `<a href="${data.data.bitly_url}">LINK AL GIF</a>`
-
-                consulta.appendChild(newConsult);
-                console.log(data)
+                data.data.forEach(el => {
+                    const newConsult = document.createElement('article');
+                    newConsult.innerHTML += `<h3>${el.username ? el.username : 'Sin titulo :c'}</h3>
+                                            <img src="${el.images.downsized.url}"></img>
+                                            <a href="${el.bitly_url}">LINK AL GIF</a>`
+                    consulta.appendChild(newConsult);
+                });
             })
             .catch(error => console.log(error))
     }
+
+    loadResults()
+
+    function loadMore() {
+        offset += limit;
+        loadResults()
+    }
+
+    const nextContent = document.querySelector('#loadMoreButton')
+    nextContent.addEventListener('click', loadMore)
 })
 // FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69
+//api_key=fRosJIDpbrsMJEpcfjX9ckflY6Woj28R&tag=&rating=g
