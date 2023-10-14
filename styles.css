@@ -103,7 +103,7 @@
   }
 
   .boton {
-    background: #f0f9ff;
+    background: #f130d8;
     font-weight: 500;
     border: none;
     border-radius: 15px;
@@ -114,11 +114,12 @@
     bottom: 6%;
     left: 90%;
     transform: translate(-80%, -10%);
+    z-index: 1000;
     transition: all 0.1s;
   }
 
   .boton:hover {
-    background: #f130d8;
+    background: #f0f9ff;
   }
   
   @media (max-width:767px) {
