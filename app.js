@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     let offset = 0;
-    const limit = 10; // Número de resultados por página
+    const limit = 12; // Número de resultados por página
 
     function loadResults() {
         offset += limit;
